@@ -12,13 +12,14 @@ const Projects = ({ darkMode }) => {
       alt: "Noxe",
       tags: ["React", "Vite", "Tailwind CSS", "React Router"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Noxe.git",
-      demoLink: "https://noxe-cinematic.vercel.app/",
+      demoLink: "https://noxe-dun.vercel.app/",
     },
     {
       id: 2,
       title: "Code Zone",
       des: "A professional landing page and about section designed with a focus on modern UI/UX principles.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
       alt: "Code Zone",
       tags: ["React", "Tailwind CSS", "JavaScript"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Code-zone-about-page-.git",
