@@ -1,5 +1,5 @@
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import nox from "../assets/nox.png";
+import { FaExternalLinkAlt, FaGithub, FaPlay } from "react-icons/fa";
+import noxeImg from "../assets/Noxe.png";
 import shadow_stalkers from "../assets/shadow-stalkers.png";
 
 const Projects = ({ darkMode }) => {
@@ -8,7 +8,7 @@ const Projects = ({ darkMode }) => {
       id: 1,
       title: "Noxe",
       des: "A modern, cinematic movie streaming interface built with React, Vite, and Tailwind CSS.",
-      image: nox,
+      image: noxeImg,
       alt: "Noxe",
       tags: ["React", "Vite", "Tailwind CSS", "React Router"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Noxe.git",
@@ -95,25 +95,24 @@ const Projects = ({ darkMode }) => {
             >
               <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "bg-[#0b0e14] ring-2 ring-blue-500/50" : ""}`}>
                 {project.id === 1 ? (
-                  <div className="absolute inset-0 flex gap-1 p-1 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="flex-1 flex flex-col gap-1 transform -rotate-12 translate-y-2">
-                       <img src="https://upload.wikimedia.org/wikipedia/en/9/90/Bad_Boys_for_Life_poster.jpg" className="rounded-sm shadow-2xl" alt="" />
-                       <img src="https://upload.wikimedia.org/wikipedia/en/3/34/The_Grudge_2020_Poster.jpeg" className="rounded-sm shadow-2xl" alt="" />
-                    </div>
-                    <div className="flex-1 flex flex-col gap-1 transform -rotate-12 -translate-y-4">
-                       <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Birds_of_Prey_%282020_film%29_poster.jpg" className="rounded-sm shadow-2xl" alt="" />
-                       <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Underwater_poster.jpeg" className="rounded-sm shadow-2xl" alt="" />
-                    </div>
-                    <div className="flex-1 flex flex-col gap-1 transform -rotate-12 translate-y-6">
-                       <img src="https://upload.wikimedia.org/wikipedia/en/d/de/Gretel_%26_Hansel_-_A_Grim_Fairy_Tale_theatrical_poster.jpeg" className="rounded-sm shadow-2xl" alt="" />
-                       <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Dolittle_%282020_film_poster%29.png" className="rounded-sm shadow-2xl" alt="" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-[#0b0e14]/40 to-transparent z-10" />
+                  <div className="relative h-full w-full group/image">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e14] via-transparent to-transparent z-10" />
                     <div className="absolute top-2 left-2 z-20">
                       <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest shadow-lg border border-blue-400/30">
                         Featured
                       </span>
                     </div>
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover/image:opacity-100 transition-all duration-500 scale-50 group-hover/image:scale-100">
+                      <div className="w-12 h-12 bg-blue-600/20 backdrop-blur-md rounded-full flex items-center justify-center border border-blue-400/30 shadow-xl shadow-blue-500/20">
+                        <FaPlay className="text-white text-lg ml-1" />
+                      </div>
+                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.alt}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover/image:scale-110 group-hover/image:rotate-1"
+                    />
                   </div>
                 ) : (
                   <img
