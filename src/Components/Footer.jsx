@@ -33,7 +33,7 @@ const Footer = ({ darkMode }) => {
                 color: darkMode ? "#9ca3af" : "#6b7280",
               }}
             >
-              Front-End Developer
+              Full-Stack Developer
             </p>
           </div>
           <div className="flex gap-4">

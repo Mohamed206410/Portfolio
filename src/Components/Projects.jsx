@@ -6,13 +6,13 @@ const Projects = ({ darkMode }) => {
   const Projects = [
     {
       id: 1,
-      title: "Noxe App",
-      des: "A responsive movie streaming platform interface with dynamic data fetching.",
+      title: "Noxe",
+      des: "A modern, cinematic movie streaming interface built with React, Vite, and Tailwind CSS.",
       image: nox,
-      alt: "Noxe App",
-      tags: ["React", "Tailwind CSS", "JavaScript", "Motion"],
+      alt: "Noxe",
+      tags: ["React", "Vite", "Tailwind CSS", "React Router"],
       codeLink: "https://github.com/Mohamed-Fahmy06/Noxe.git",
-      demoLink: "https://noxe-5clx.vercel.app/",
+      demoLink: "https://noxe-cinematic.vercel.app/",
     },
     {
       id: 2,
@@ -93,7 +93,10 @@ const Projects = ({ darkMode }) => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className="h-36 overflow-hidden rounded-t-xl">
+              <div className={`h-36 overflow-hidden rounded-t-xl relative ${project.id === 1 ? "ring-1 ring-orange-500/30" : ""}`}>
+                {project.id === 1 && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
+                )}
                 <img
                   src={project.image}
                   alt={project.alt}
